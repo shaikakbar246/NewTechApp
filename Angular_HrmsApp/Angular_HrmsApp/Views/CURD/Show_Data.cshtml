@@ -1,0 +1,102 @@
+﻿@model Angular_HrmsApp.Models.EmployeeDetails
+@{
+    ViewBag.Title = "Show_Data";
+    Layout = "~/Views/Shared/_HrmsAdminMaster.cshtml";
+}
+
+<h2>Show_Data</h2>
+
+<html>
+<head>
+    <script type="text/javascript">
+        var app = angular.module("Homeapp", []);
+        app.controller("CURDController", function ($scope, $http) {
+            $scope.btntext = "Save";
+            $scope.Savedata = function () {
+                $scope.btntext = "Please Wait...";
+                $http({
+                    method: 'POST',
+                    url: '/CURD/Add_Record',
+                    data: $scope.EmployeeDetails
+                }).then(function (d) {
+                    $scope.btntext = "Save";
+                    $scope.EmployeeDetails = "";
+                    alert(d);
+                }).then(function (error) {
+                    alert(error);
+                })
+            }
+            $http({
+                method: 'GET',
+                url: '/CURD/Get_Record',
+            }).then(function (d) {
+                $scope.EmployeeDetails = d.data;;
+            }, function (error) {
+                alert(error);
+            });
+
+            $scope.loadrecord = function (id) {
+                $http({
+                    method: 'GET',
+                    url: '/CURD/Get_Data_By_ID?id=' + id,
+                }).then(function (d) {
+                    $scope.EmployeeDetails = d.data[0];
+                }, function (error) {
+                    alert(error);
+                });
+            }
+
+            $scope.Updatedata = function () {
+                $scope.btntext = "Please Wait...";
+                $http({
+                    method: 'POST',
+                    url: '/CURD/Update_Record',
+                    data: $scope.EmployeeDetails
+                }).then(function (d) {
+                    $scope.btntext = "Update";
+                    $scope.EmployeeDetails = "";
+                    alert(d);
+                }).then(function (error) {
+                    alert(error);
+                })
+            }
+
+            $scope.delete = function (id) {
+                $http({
+                    method: 'GET',
+                    url: '/CURD/Delete?id=' + id,
+                }).then(function (d) {
+                    alert(d.data);
+
+                }, function (error) {
+                    alert(error);
+                });
+            }
+        })
+    </script>
+</head>
+<body>
+    <div ng-app="Homeapp" ng-controller="CURDController">
+        <table class="table-responsive">
+            <tr>
+                <th>EmpNo</th>
+                <th>EmployeeName</th>
+                <th>PhoneNo</th>
+                <th>Email</th>
+                <th>City</th>
+            </tr>
+            <tr ng-repeat="e in EmployeeDetails">
+                <td>{{e.employee_num}}</td>
+                <td>{{e.fullname}}</td>
+                <td>{{e.cellphone}}</td>
+                <td>{{e.email}}</td>
+                <td>{{e.city}}</td>
+                <td><a href="/CURD/Update_Data?id={{e.empid}}">Update</a></td>
+                <td><a ng-click="delete(e.empid)">Delete</a></td>
+            </tr>
+        </table>
+    </div>
+    <script src="~/AngularScripts/CurdOperation.js"></script>
+    <script src="~/Angula_JS/angular.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\ApplicationInsights.config
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\roslyn\csc.exe
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\roslyn\System.Collections.Immutable.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\roslyn\vbc.exe
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\roslyn\VBCSCompiler.exe
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\roslyn\VBCSCompiler.exe.config
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\MVCApplication.dll.config
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\MVCApplication.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\MVCApplication.pdb
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\Microsoft.AI.Web.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\Microsoft.AI.WindowsServer.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\Microsoft.ApplicationInsights.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\Microsoft.Web.Infrastructure.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\System.Web.Helpers.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\System.Web.Mvc.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\System.Web.Razor.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\System.Web.Webpages.Deployment.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\System.Web.Webpages.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\System.Web.Webpages.Razor.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\Microsoft.AI.Web.xml
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\Microsoft.AI.WindowsServer.xml
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\Microsoft.ApplicationInsights.xml
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\System.Web.Razor.xml
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\System.Web.Webpages.xml
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\System.Web.Webpages.Deployment.xml
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\System.Web.Webpages.Razor.xml
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\System.Web.Helpers.xml
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\bin\System.Web.Mvc.xml
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\obj\Debug\MVCApplication.csprojResolveAssemblyReference.cache
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\obj\Debug\MVCApplication.dll
+c:\users\dell\documents\visual studio 2015\Projects\MVCApplication\MVCApplication\obj\Debug\MVCApplication.pdb
+F:\NewPersonnal\NewTechnologyApplication\MVCApplication\MVCApplication\obj\Debug\MVCApplication.csproj.AssemblyReference.cache
+F:\NewPersonnal\NewTechnologyApplication\MVCApplication\MVCApplication\obj\Debug\MVCApplication.csproj.CoreCompileInputs.cache
+F:\NewPersonnal\NewTechnologyApplication\MVCApplication\MVCApplication\obj\Debug\MVCApplication.dll
+F:\NewPersonnal\NewTechnologyApplication\MVCApplication\MVCApplication\obj\Debug\MVCApplication.pdb

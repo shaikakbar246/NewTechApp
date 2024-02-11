@@ -1,0 +1,37 @@
+﻿
+@using MVCApplication.Models;
+@model IEnumerable<Student>
+
+@{
+    ViewBag.Title = "studentdata";
+}
+
+<h2>StudentInformation</h2>
+
+<hr />
+
+<table>
+    <tr>
+        <th>
+            Student Number
+        </th>
+        <th>
+            FulName
+        </th>
+        <th>
+            Gender
+        </th>
+        <th>
+            Nationality
+        </th>
+    </tr>
+    @foreach(Student s in Model)
+    {
+        <tr>
+            <td>@s.employee_num</td>
+            <td>@s.fullname</td>
+            <td>@s.gender</td>
+            <td>@s.nationality</td>
+        </tr>
+    }
+</table>

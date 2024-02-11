@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_HrmsAdminMaster.cshtml";
+}
+<h2>Index</h2>
+
+<html>
+<head>
+    <script type="text/javascript">
+        var app = angular.module("Homeapp", []);
+        app.controller("CURDController", function ($scope, $http) {
+            $scope.btntext = "Save";
+            $scope.Savedata = function () {
+                $scope.btntext = "Please Wait...";
+                $http({
+                    method: 'POST',
+                    url: '/CURD/Add_Record',
+                    data: $scope.EmployeeDetails
+                }).then(function (d) {
+                    $scope.btntext = "Save";
+                    $scope.EmployeeDetails = "";
+                    alert(d);
+                }).then(function (error) {
+                    alert(error);
+                })
+            }
+            $http({
+                method: 'GET',
+                url: '/CURD/Get_Record',
+            }).then(function (d) {
+                $scope.EmployeeDetails = d.data;;
+            }, function (error) {
+                alert(error);
+            });
+
+            $scope.loadrecord = function (id) {
+                $http({
+                    method: 'GET',
+                    url: '/CURD/Get_Data_By_ID?id=' + id,
+                }).then(function (d) {
+                    $scope.EmployeeDetails = d.data[0];
+                }, function (error) {
+                    alert(error);
+                });
+            }
+
+            $scope.Updatedata = function () {
+                $scope.btntext = "Please Wait...";
+                $http({
+                    method: 'POST',
+                    url: '/CURD/Update_Record',
+                    data: $scope.EmployeeDetails
+                }).then(function (d) {
+                    $scope.btntext = "Update";
+                    $scope.EmployeeDetails = "";
+                    alert(d);
+                }).then(function (error) {
+                    alert(error);
+                })
+            }
+
+            $scope.delete = function (id) {
+                $http({
+                    method: 'GET',
+                    url: '/CURD/Delete?id=' + id,
+                }).then(function (d) {
+                    alert(d.data);
+
+                }, function (error) {
+                    alert(error);
+                });
+            }
+        })
+    </script>
+</head>
+<body>
+    <div ng-app="Homeapp" ng-controller="CURDController">
+        <div class="container">
+            <div class="row" id="AddRecord" style="display:none">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <label>EmployeeNumber</label>
+                        <input type="text" ng-model="EmployeeDetails.employee_num" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Employee Name</label>
+                        <input type="text" ng-model="EmployeeDetails.fullname" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="text" ng-model="EmployeeDetails.cellphone" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>E-Mail</label>
+                        <input type="text" ng-model="EmployeeDetails.email" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" ng-model="EmployeeDetails.city" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="button"   class="btn btn-primary" ng-click="Savedata()" value={{btntext}}>
+                    </div>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </div>
+        <div id="listView">
+            <table class="table-responsive">
+                <tr>
+                    <th>EmpNo</th>
+                    <th>EmployeeName</th>
+                    <th>PhoneNo</th>
+                    <th>Email</th>
+                    <th>City</th>
+                </tr>
+                <tr ng-repeat="e in EmployeeDetails">
+                    <td>{{e.employee_num}}</td>
+                    <td>{{e.fullname}}</td>
+                    <td>{{e.cellphone}}</td>
+                    <td>{{e.email}}</td>
+                    <td>{{e.city}}</td>
+                    <td><a href="/CURD/Update_Data?id={{e.empid}}">Update</a></td>
+                    <td><a ng-click="delete(e.empid)">Delete</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="~/AngularScripts/CurdOperation.js"></script>
+    <script src="~/Angula_JS/angular.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "BasicDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>BasicDetails</h2>
+<html>
+<head>
+    <title>login</title>
+    <script type="text/javascript">
+        function newname() {
+            var uname = document.getElementById("txtUserName").value;
+            alert(uname);
+            return true;
+
+        }
+    </script>
+
+</head>
+<body>
+    <label> UserName</label>
+    <input type="text" name="username" id="txtUserName" class="form-control" />
+    <label> PassWord</label>
+    <input type="password" name="password" id="txtPassword" class="form-control" />
+    <input type="submit" name="login" onclick="newname();" class="btn-primary" />
+</body>
+</html>

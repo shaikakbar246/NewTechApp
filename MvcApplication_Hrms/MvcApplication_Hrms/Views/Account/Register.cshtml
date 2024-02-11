@@ -1,0 +1,81 @@
+﻿
+@model MvcApplication_Hrms.Models.RegisterViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<!DOCTYPE html>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @id = "txtEmployeeName" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Address)
+        @Html.TextBoxFor(m => m.Address, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Gender)
+        <div class="radio-inline">
+            @Html.RadioButtonFor(m => m.Gender, "M")Male
+        </div>
+        <div class="radio-inline">
+            @Html.RadioButtonFor(m => m.Gender, "F")Female
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.CityId)
+        @Html.DropDownListFor(m => m.CityId, new SelectList(ViewBag.CityList, "id", "Name"), "SelectCity", new { @id = "ddlcity_id", @class = "form-control", @onchange = "callChangefunc(this.value)" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Languages)
+        @Html.ListBoxFor(m => m.Languages, new MultiSelectList(new string[] { "Hindi", "English", "Telugu" }), new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password)
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ConfirmPassword)
+        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+    </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Status)
+            @Html.EnumDropDownListFor(m => m.Status, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <div class="checkbox">
+                @Html.CheckBoxFor(m => m.IsAgree)is Agree Terms and condition
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" name="Command" value="Register" class="form-control" />
+            <input type="submit" name="Command" value="Cancel" class="form-control" />
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <a href="/Account/Index" class="Button">BackToList</a>
+        </div>
+
+    
+        <script>
+            function callChangefunc(val) {
+          
+                var test = document.getElementById("ddlcity_id").value;
+                alert(test);
+            }
+        </script>
+
+}
+

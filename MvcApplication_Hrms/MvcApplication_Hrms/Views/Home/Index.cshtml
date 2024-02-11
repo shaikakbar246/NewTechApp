@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+
+    string[] colors = { "Red", "Green", "Yellow", "Blue" };
+
+    List<SelectListItem> lst = new List<SelectListItem>()
+        {
+            new SelectListItem() {Text="Monday",Value="1" },
+            new SelectListItem() {Text="Tuesaday",Value="2" },
+            new SelectListItem() {Text="Wednesday",Value="3" }
+        };
+
+    lst.Add(new SelectListItem() { Text = "Thursday", Value = "4" });
+
+    SelectListItem it = new SelectListItem() { Text = "Friday", Value = "5" };
+
+    lst.Add(it);
+
+}
+
+
+<h2>Index</h2>
+
+@*@Html.DropDownList("color",new SelectList(colors),"Select Color",new {@class="form-control"})*@ @*firstmethod*@
+
+@Html.DropDownList("color", new SelectList(new string[] { "Red", "White", "Black" }), "Select Color", new { @class = "form-control" })
+
+<br />
+
+@Html.DropDownList("color", new SelectList(lst, "Value", "Text"), "Select Day", new { @class = "form-control" })
+<br />
+
+@Html.DropDownList("color", new SelectList(ViewBag.CityList, "id", "name"), "Select City", new { @class = "form-control" })
+<br />
+@Html.ListBox("color", new SelectList(colors), new { @class = "form-control" })
+<br />
+
+@Html.ListBox("city", new SelectList(ViewBag.CityList, "id", "name"), new { @class = "form-control" })

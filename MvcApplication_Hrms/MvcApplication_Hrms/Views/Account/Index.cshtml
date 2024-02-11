@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<!DOCTYPE html>
+<div class="table-responsive">
+    <a href="/Account/Register" class="Button">ADD</a>
+</div>
+<table class="table-responsive">
+    <tr>
+        <th>
+            Employee Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Gender
+        </th>
+        <th>
+            Address
+        </th>
+    </tr>
+    @foreach (var lst in ViewBag.contentlist)
+            {
+        <tr>
+            <td>@lst.Name</td>
+            <td>@lst.Email</td>
+            <td>@lst.Gender</td>
+            <td>@lst.Address</td>
+        </tr>
+    }
+</table>
+
+<script src="~/scripts/bootstrap.js"></script>

@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "DotNet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DotNet</h2>
+<div class="row">
+    <div class="col-md-4">
+        @Html.Action("Sidebar");
+    </div>
+    <div class="col-md--8">
+        Partial View is a subpage of Main View page that keeps reusable parts of web pages.
+        If your Main Page is too large then you can divide it into several pieces and store content into a partial page with a logical name.
+        After that, you can call this partial page inside your main view page.
+    </div>
+</div>
+

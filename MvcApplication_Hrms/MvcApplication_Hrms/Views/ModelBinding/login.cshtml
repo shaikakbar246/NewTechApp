@@ -1,0 +1,36 @@
+﻿@model MvcApplication_Hrms.Models.UserLogin
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+
+@*<form method="post" action="/ModelBinding/Login">
+    <label> UserName</label>
+    <input type="text" name="username" class="form-control"/>
+    <label> PassWord</label>
+    <input type="password" name="password" class="form-control" />
+    <input type="submit" name="login" />
+</form>*@
+<html>
+<head>
+    <title>login</title>
+    <script type="text/javascript">
+        function newname() {
+            var uname = document.getElementById("txtUserName").value;
+            alert(uname);
+            return true;
+        }
+    </script>
+
+</head>
+<body>
+    <label> UserName</label>
+    <input type="text" name="username" id="txtUserName" class="form-control"/>
+    <label> PassWord</label>
+    <input type="password" name="password" id="txtPassword" class="form-control" />
+    <input type="submit" name="login" onclick="newname();" class="btn-primary" />
+</body>
+</html>
